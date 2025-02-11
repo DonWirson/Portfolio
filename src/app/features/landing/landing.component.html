@@ -31,7 +31,8 @@
               {{item.title}} 
             </h5>
             <p class="card-text">{{item.description}}</p>
-            <a class="btn btn-primary" href="{{item.projectUrl}}" target="_blank" rel="noopener noreferrer">Codigo Fuente</a>
+              <a class="btn btn-primary" href="{{item.projectUrl}}" target="_blank" rel="noopener noreferrer">Codigo Fuente</a>
+              <a *ngIf="item.demoUrl" class="btn btn-outline-success ms-1" href="{{item.demoUrl}}" target="_blank" rel="noopener noreferrer">Demo</a>
           </div>
         </div>
       </div>
