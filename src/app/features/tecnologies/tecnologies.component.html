@@ -1,0 +1,50 @@
+<div class="container py-5">
+  <h1 class="text-white mb-5 text-center">Tecnologías</h1>
+  
+  <!-- Navigation Index -->
+  <div class="d-flex justify-content-center gap-3 mb-5">
+    <button 
+      class="btn"
+      [class.btn-primary]="selectedIndex === 0"
+      [class.btn-outline-primary]="selectedIndex !== 0"
+      (click)="selectedIndex = 0">
+      Flutter
+    </button>
+    <button 
+      class="btn"
+      [class.btn-primary]="selectedIndex === 1"
+      [class.btn-outline-primary]="selectedIndex !== 1"
+      (click)="selectedIndex = 1">
+      .Net
+    </button>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="container text-center">
+    <div class="row justify-content-center align-items-center">
+      <ng-container *ngFor="let card of tecnologias; let i = index">
+        <div class="col-sm-8 col-md-6" *ngIf="i === selectedIndex">
+          <div class="card">
+            <div class="card-body">
+              <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                <image width="50" height="50" [attr.xlink:href]="card.svgUrl"/>
+              </svg>
+              <h5 class="card-title mt-3">
+                {{card.title}} 
+              </h5>
+              <p class="card-text">{{card.description}}</p>
+              <a *ngFor="let link of card.links" 
+                 class="btn btn-primary ms-1" 
+                 [href]="link.url" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                {{link.label}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
