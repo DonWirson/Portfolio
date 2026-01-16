@@ -5,6 +5,7 @@ interface TecnologyCard {
   title: string;
   svgUrl: string;
   description: string;
+  stars: number;
   links: { label: string; url: string }[];
 }
 
@@ -23,6 +24,7 @@ export class TecnologiesComponent {
       title: 'Flutter',
       svgUrl: 'assets/svg/flutter-svgrepo-com.svg',
       description: 'Framework multiplataforma para crear aplicaciones móviles, web y de escritorio con un solo código.',
+      stars: 5,
       links: [
         { label: 'Documentación', url: 'https://flutter.dev' },
         { label: 'Mi Repositorio', url: 'https://github.com/DonWirson' }
@@ -30,8 +32,9 @@ export class TecnologiesComponent {
     },
     {
       title: '.Net',
-      svgUrl: 'assets/svg/angular-svgrepo-com.svg',
+      svgUrl: 'assets/svg/dotnet-svgrepo-com.svg',
       description: 'Plataforma de desarrollo versátil para crear aplicaciones web, móviles y de escritorio.',
+      stars: 3,
       links: [
         { label: 'Documentación', url: 'https://dotnet.microsoft.com' },
         { label: 'Mi Repositorio', url: 'https://github.com/DonWirson' }
